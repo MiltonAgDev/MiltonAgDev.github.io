@@ -632,7 +632,168 @@ h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; }
   margin: 0;
 }
 
-/* ── ANIMATIONS ───────────────────────────── */
+/* ── BRAND LOGO ───────────────────────────── */
+.brand-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+/* ── HERO PHOTO ───────────────────────────── */
+.hero-photo {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.15);
+}
+
+/* ── ABOUT PHOTO CARD ─────────────────────── */
+.about-photo-card {
+  position: relative;
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 420px;
+}
+.about-profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+.about-photo-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(13,27,42,0.92) 0%, transparent 100%);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+.about-logo-badge {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.2) drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
+
+/* ── CONTACT CARDS ────────────────────────── */
+.contact-intro {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 1.5rem 0 3rem;
+}
+
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.4rem 1.5rem;
+  background: var(--light);
+  border: 1.5px solid var(--gray-soft);
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(46,134,222,0.04));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.contact-card:hover::before { opacity: 1; }
+.contact-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(46,134,222,0.12);
+  color: var(--text-dark);
+}
+.contact-card.no-link { cursor: default; }
+.contact-card.no-link:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--gray-soft);
+}
+
+.contact-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.contact-card-icon.gmail    { background: #fce8e6; color: #ea4335; }
+.contact-card-icon.hotmail  { background: #e5f0fb; color: #0078d4; }
+.contact-card-icon.whatsapp { background: #e7f8ed; color: #25d366; }
+.contact-card-icon.location { background: #eef2f9; color: var(--blue-mid); }
+
+.whatsapp-card:hover {
+  border-color: #25d366;
+  box-shadow: 0 12px 32px rgba(37,211,102,0.15);
+}
+
+.contact-card-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.contact-card-info strong {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+.contact-card-info span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-card-arrow {
+  color: var(--text-muted);
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+.contact-card:not(.no-link):hover .contact-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 575px) {
+  .contact-card-info span { font-size: 0.8rem; }
+  .about-photo-card { height: 300px; }
+}
+
 .reveal-up, .reveal-left, .reveal-right {
   opacity: 0;
   transition: opacity 0.7s ease, transform 0.7s ease;
