@@ -16,7 +16,7 @@
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="#inicio">
-        <span class="brand-initials">MA</span>
+        <img src="LOGO_2026.png" alt="Dev Software Logo" class="brand-logo"/>
         <span class="brand-name">Milton Aguirre</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -54,7 +54,7 @@
           <div class="hero-card reveal-right">
             <div class="hero-card-inner">
               <div class="hero-avatar">
-                <i class="bi bi-person-circle"></i>
+                <img src="yo.jpg" alt="Milton Aguirre" class="hero-photo"/>
               </div>
               <div class="hero-stats">
                 <div class="stat-item">
@@ -95,12 +95,10 @@
       </div>
       <div class="row g-5 align-items-center mt-2">
         <div class="col-lg-5 reveal-left">
-          <div class="about-card">
-            <div class="about-icon-grid">
-              <div class="about-icon-item"><i class="bi bi-cpu-fill"></i><span>Hardware</span></div>
-              <div class="about-icon-item"><i class="bi bi-code-slash"></i><span>Software</span></div>
-              <div class="about-icon-item"><i class="bi bi-database-fill"></i><span>Bases de Datos</span></div>
-              <div class="about-icon-item"><i class="bi bi-camera-video-fill"></i><span>CCTV</span></div>
+          <div class="about-card about-photo-card">
+            <img src="yo.jpg" alt="Milton Aguirre" class="about-profile-photo"/>
+            <div class="about-photo-overlay">
+              <img src="LOGO_2026.png" alt="Dev Software" class="about-logo-badge"/>
             </div>
           </div>
         </div>
@@ -365,67 +363,59 @@
         <h2 class="section-title">Hablemos <span class="accent-text">Juntos</span></h2>
         <div class="section-divider"></div>
       </div>
-      <div class="row g-5 mt-2 justify-content-center">
-        <div class="col-lg-5 reveal-left">
-          <div class="contact-info">
-            <h4>¿Listo para trabajar juntos?</h4>
-            <p>Estoy disponible para nuevas oportunidades laborales. No dudes en contactarme para discutir cómo puedo aportar valor a tu equipo.</p>
-            <div class="contact-items mt-4">
-              <div class="contact-item">
-                <i class="bi bi-geo-alt-fill"></i>
-                <div>
-                  <strong>Ubicación</strong>
-                  <span>El Salvador</span>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="bi bi-envelope-fill"></i>
-                <div>
-                  <strong>Correo Electrónico</strong>
-                  <span>tu@correo.com</span>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="bi bi-telephone-fill"></i>
-                <div>
-                  <strong>Teléfono</strong>
-                  <span>+503 0000-0000</span>
-                </div>
-              </div>
-            </div>
+      <p class="contact-intro reveal-up">
+        Estoy disponible para nuevas oportunidades laborales.<br/>
+        Escríbeme directamente por cualquiera de estos canales.
+      </p>
+      <div class="contact-cards-grid reveal-up">
+
+        <!-- Gmail -->
+        <a href="mailto:aguirrep2016@gmail.com" class="contact-card">
+          <div class="contact-card-icon gmail">
+            <i class="bi bi-envelope-fill"></i>
+          </div>
+          <div class="contact-card-info">
+            <strong>Gmail</strong>
+            <span>aguirrep2016@gmail.com</span>
+          </div>
+          <i class="bi bi-arrow-right contact-card-arrow"></i>
+        </a>
+
+        <!-- Hotmail -->
+        <a href="mailto:aguirre429_16@hotmail.com" class="contact-card">
+          <div class="contact-card-icon hotmail">
+            <i class="bi bi-envelope-at-fill"></i>
+          </div>
+          <div class="contact-card-info">
+            <strong>Hotmail</strong>
+            <span>aguirre429_16@hotmail.com</span>
+          </div>
+          <i class="bi bi-arrow-right contact-card-arrow"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/50361831081" target="_blank" rel="noopener" class="contact-card whatsapp-card">
+          <div class="contact-card-icon whatsapp">
+            <i class="bi bi-whatsapp"></i>
+          </div>
+          <div class="contact-card-info">
+            <strong>WhatsApp</strong>
+            <span>+503 6183-1081 · Enviar mensaje</span>
+          </div>
+          <i class="bi bi-arrow-right contact-card-arrow"></i>
+        </a>
+
+        <!-- Ubicación -->
+        <div class="contact-card no-link">
+          <div class="contact-card-icon location">
+            <i class="bi bi-geo-alt-fill"></i>
+          </div>
+          <div class="contact-card-info">
+            <strong>Ubicación</strong>
+            <span>El Salvador</span>
           </div>
         </div>
-        <div class="col-lg-6 reveal-right">
-          <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <label class="form-label">Nombre</label>
-                <input type="text" class="form-control custom-input" placeholder="Tu nombre" required/>
-              </div>
-              <div class="col-sm-6">
-                <label class="form-label">Empresa / Cargo</label>
-                <input type="text" class="form-control custom-input" placeholder="Tu empresa"/>
-              </div>
-              <div class="col-12">
-                <label class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control custom-input" placeholder="tu@correo.com" required/>
-              </div>
-              <div class="col-12">
-                <label class="form-label">Mensaje</label>
-                <textarea class="form-control custom-input" rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-primary-custom w-100">
-                  <i class="bi bi-send-fill me-2"></i>Enviar Mensaje
-                </button>
-              </div>
-            </div>
-          </form>
-          <div id="formSuccess" class="form-success d-none">
-            <i class="bi bi-check-circle-fill"></i>
-            <p>¡Mensaje enviado con éxito! Me pondré en contacto pronto.</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -439,7 +429,4 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+  <script data-cfasync="false" src="/cd
