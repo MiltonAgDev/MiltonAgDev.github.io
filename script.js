@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── NAVBAR SCROLL ─────────────────────────
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 30);
+    nav.classList.toggle('scrolled', window.scrollY > 60);
   });
 
   // ── SMOOTH ACTIVE NAV LINK ─────────────────
